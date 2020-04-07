@@ -18,5 +18,5 @@
 {%- set rectangle = salt['grains.filter_by']( {'defaults': defaults}, default='defaults', merge=_config) %}
 
 {%- if rectangle.pkg.use_upstream_macapp %}
-    {%- do rectangle.pkg.macapp.update({ 'source': '%s/v%s/%s%s.%s'|format(rectangle.pkg.macapp.uri, rectangle.version, rectangle.pkg.name, rectangle.version, rectangle.pkg.suffix) }) %}  #noqa 204
+    {%- do rectangle.pkg.macapp.update({ 'source': '%s/v%s/%s%s.%s'|format(rectangle.pkg.macapp.uri, rectangle.version, rectangle.pkg.name, rectangle.version, rectangle.pkg.suffix) }) %}  # noqa 204
 {%- endif %}
