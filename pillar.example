@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+---
+rectangle:
+  version: 0.24
+  pkg:
+    macapp:
+      source_hash: 211803475076096b63494fa2946da452fa7f7c924259095b9b1775100f284ac0

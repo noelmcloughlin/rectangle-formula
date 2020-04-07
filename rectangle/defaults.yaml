@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+---
+rectangle:
+  version: 0.24
+  rootuser: root
+  rootgroup: root
+  dir:
+    tmp: /tmp/rectangle
+    macapp: /Applications
+  pkg:
+    name: Rectangle
+    use_upstream_macapp: true
+    suffix: dmg
+    macapp:
+      uri: https://github.com/rxhanson/Rectangle/releases/download
+      source: 'set by map.jinja'
+      source_hash: 211803475076096b63494fa2946da452fa7f7c924259095b9b1775100f284ac0
+  retry_option:
+    # https://docs.saltstack.com/en/latest/ref/states/requisites.html#retrying-states
+    attempts: 3
+    until: true
+    interval: 10
+    splay: 10
